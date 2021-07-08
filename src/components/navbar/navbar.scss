@@ -1,0 +1,52 @@
+@import "../../styles/variables";
+
+.text {
+  font-family: $primary-font;
+  font-size: $big;
+  color: $secondary-color;
+}
+
+.title {
+  text-decoration: none;
+  margin-left: 20px;
+  @extend .text;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.menu-link {
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 5px;
+  text-decoration: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $primary-color;
+  @extend .text;
+
+  &:hover {
+    border-color: $secondary-color;
+  }
+  &:active,
+  &.active {
+    background-color: $secondary-color;
+    transition: 0.5s ease-out;
+    color: $primary-color;
+  }
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $primary-color;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
