@@ -5,7 +5,7 @@ import "./navbar.scss";
 const Navbar: FC = () => {
   return (
     <nav className={`navbar-container`}>
-      <NavLink className={`title`} exact to={`/`}>
+      <NavLink className={`website-name`} exact to={`/`}>
         {`Movie Browser`}
       </NavLink>
       <ul className={`menu-list`}>
