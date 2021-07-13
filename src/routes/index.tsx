@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Route, Switch } from "react-router-dom";
-import { HomeView } from "../views";
+import { HomeView } from "../pages";
 
 const Routes: FC = () => {
   return (

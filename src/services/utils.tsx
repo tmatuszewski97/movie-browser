@@ -1,0 +1,5 @@
+const http = {
+  get: (url: string) => fetch(url).then((response) => response.json()),
+};
+
+export default http;
