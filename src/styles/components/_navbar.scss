@@ -1,5 +1,3 @@
-@import "../../styles/variables";
-
 .text {
   font-family: $primary-font;
   font-size: $big;
@@ -42,11 +40,11 @@
 
 .navbar-container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  height: 45px;
   top: 0;
-  width: 100%;
   background-color: $primary-color;
   padding-top: 5px;
   padding-bottom: 5px;
