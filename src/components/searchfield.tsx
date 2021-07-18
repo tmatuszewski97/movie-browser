@@ -1,14 +1,17 @@
 import React, { FC } from "react";
 
-const Searchfield: FC = () => {
+interface Props {
+  className?: string;
+  placeholder: string;
+}
+
+const Searchfield: FC<Props> = ({ className, placeholder }) => {
   return (
-    <>
-      <input
-        type="text"
-        placeholder="Search for a movie..."
-        style={{ borderWidth: 3, borderStyle: "solid", borderColor: "yellow" }}
-      />
-    </>
+    <input
+      className={`searchfield ${className}`}
+      type="text"
+      placeholder={placeholder}
+    />
   );
 };
 

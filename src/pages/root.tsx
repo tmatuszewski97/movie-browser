@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { Navbar } from "../components";
 
-const RootView: FC = ({ children }) => {
+const RootPage: FC = ({ children }) => {
   return (
     <>
       <Navbar />
@@ -10,4 +10,4 @@ const RootView: FC = ({ children }) => {
   );
 };
 
-export default RootView;
+export default RootPage;

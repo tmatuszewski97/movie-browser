@@ -1,1 +1,11 @@
-
+@mixin flex-row-container(
+  $flex-value,
+  $align-items-value,
+  $justify-content-value
+) {
+  flex: $flex-value;
+  display: flex;
+  flex-direction: row;
+  align-items: $align-items-value;
+  justify-content: $justify-content-value;
+}

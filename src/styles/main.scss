@@ -3,7 +3,11 @@
 
 @import "base/reset";
 
+@import "components/button";
+@import "components/icon";
 @import "components/navbar";
+@import "components/search-navbar";
+@import "components/searchbox";
 @import "components/searchfield";
 
-@import "pages/home";
+@import "pages/movies";

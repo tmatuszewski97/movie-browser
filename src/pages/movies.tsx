@@ -1,8 +1,8 @@
 import React, { FC, useEffect, useState } from "react";
-import RootView from "./root";
+import RootPage from "./root";
 import { SearchProps, movieService } from "../services/movie-service";
 
-const HomeView: FC = () => {
+const MoviesPage: FC = () => {
   const [movies, setMovies] = useState<SearchProps | null>(null);
   const [movieToSearch, setMovieToSearch] = useState<string>(
     `the lord of the rings`
@@ -16,7 +16,11 @@ const HomeView: FC = () => {
     });
   }, []);
 
-  return <RootView></RootView>;
+  return (
+    <RootPage>
+      <h1 style={{ color: "white", fontSize: "30px" }}>{`Movies page`}</h1>
+    </RootPage>
+  );
 };
 
-export default HomeView;
+export default MoviesPage;
