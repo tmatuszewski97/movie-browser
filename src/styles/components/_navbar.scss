@@ -1,51 +1,87 @@
-.text {
-  font-family: $primary-font;
-  font-size: $big;
-  color: $secondary-color;
-}
-
-.website-name {
-  text-decoration: none;
-  margin-left: 20px;
-  @extend .text;
-}
-
-.menu-list {
+.nav {
   display: flex;
-  flex-direction: row;
-  list-style: none;
-  margin-right: 20px;
-}
-
-.menu-link {
-  text-decoration: none;
-  margin-left: 20px;
-  padding: 5px;
-  text-decoration: none;
-  border-width: 1px;
-  border-style: solid;
-  border-color: $primary-color;
-  @extend .text;
-
-  &:hover {
-    border-color: $secondary-color;
-  }
-  &:active,
-  &.active {
-    background-color: $secondary-color;
-    transition: 0.5s ease-out;
-    color: $primary-color;
-  }
-}
-
-.navbar-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 45px;
+  position: sticky;
+  background-color: $yellow;
   top: 0;
-  background-color: $primary-color;
+  height: 45px;
   padding-top: 5px;
   padding-bottom: 5px;
+
+  &__text {
+    font-family: $primary-font;
+    font-size: $big;
+    color: $black;
+  }
+
+  &__panel {
+    $align-items-value: center;
+
+    &--left {
+      $justify-content-value-small-resolution: flex-start;
+      $justify-content-value-big-resolution: space-between;
+      @include flex-row-container(
+        1,
+        $align-items-value,
+        $justify-content-value-small-resolution
+      );
+
+      @media (min-width: 768px) {
+        @include flex-row-container(
+          2,
+          $align-items-value,
+          $justify-content-value-big-resolution
+        );
+      }
+    }
+
+    &--right {
+      $justify-content-value: space-evenly;
+      @include flex-row-container(
+        1,
+        $align-items-value,
+        $justify-content-value
+      );
+    }
+  }
+
+  &__website-name {
+    @extend .nav__text;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  &__searchbox {
+    display: none;
+    @media (min-width: 768px) {
+      display: flex;
+      flex: 1;
+      margin-left: 20px;
+      margin-right: 10px;
+    }
+  }
+
+  &__search-icon {
+    margin-left: 20px;
+    margin-right: 10px;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__link {
+    @extend .nav__text;
+    text-decoration: none;
+    border: 1px solid $yellow;
+    padding: 5px;
+    &:hover {
+      border-color: $black;
+    }
+    &:active,
+    &.active {
+      background-color: $black;
+      transition: 0.5s ease-out;
+      color: $yellow;
+    }
+  }
 }

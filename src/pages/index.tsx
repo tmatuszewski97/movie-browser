@@ -1,3 +1,3 @@
-import HomeView from "./home";
+import MoviesPage from "./movies";
 
-export { HomeView };
+export { MoviesPage };

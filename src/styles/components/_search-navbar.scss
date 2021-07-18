@@ -1,0 +1,12 @@
+.search-navbar {
+  display: flex;
+  padding: 2px;
+  background-color: $yellow;
+
+  &__icon {
+    margin-left: 10px;
+    font-size: $big;
+    justify-self: center;
+    align-self: center;
+  }
+}
